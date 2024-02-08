@@ -1,0 +1,235 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'poppins',sans-serif;
+}
+body{
+   background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(nature.png);
+   background-position: center;
+   background-size: cover;
+   background-attachment: fixed;
+}
+nav{
+    background-color: transparent;
+}
+nav:after{
+    content: '';
+    clear: both;
+    display: table;
+}
+nav .logo{
+    float: left;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 70px;
+    padding-left: 60px;
+   
+}
+nav .logo h1{
+    display: none;
+}
+nav .logo img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+     background: #1b1b1b;
+    
+}
+nav ul li{
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+    opacity: 0.8;
+    
+  
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+nav ul li a:hover{
+    color: cyan;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #33ffff,
+                0 0 5px #33ffff;
+}
+nav ul ul li a:hover{
+    color: cyan;
+    box-shadow: none;
+}
+nav ul ul{
+    position: absolute;
+    border-top: 3px solid cyan;
+    top: 90px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top .3s;
+}
+nav ul ul ul{
+    border-top: none;
+}
+nav ul li:hover > ul{
+    opacity: 1;
+    visibility:visible;
+    top: 70px;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgb(200,10,0);
+}
+nav ul ul li a{
+    line-height: 50px;
+}
+nav ul ul ul li{
+   position: relative;
+   top: -70px;left: 150px;
+}
+.fa-plus{
+    margin-left: 40px;
+    font-size: 15px;
+    
+}
+.show, .icon,input{
+    display: none;
+}
+@media all and (max-width:968px){
+    nav ul{
+        margin-right: 0px;
+        float: left;
+    }
+    nav .logo{
+        padding-left: 30px;
+        width: 100%;
+        background-color: #1b1b1b;
+        border: 1px solid #fff;
+    }
+    nav .logo h1{
+        float: right;
+        font-size: 20px;
+        margin-right: 200px;
+        display: block;
+    }
+    nav ul li, nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul ul{
+        top: 70px;
+        position: static;
+        border-top: none;
+        float: none;
+        display: none;
+        opacity: 1;
+        visibility: visible;
+    }
+    nav ul ul ul li{
+        position: static;
+    }
+    nav ul ul li{
+        border-bottom: 0px;
+    }
+    nav ul ul a{
+        padding-left: 40px;
+    }
+    nav ul ul ul a{
+        padding-left: 80px;
+    }
+    .show{
+        display: block;
+        color: #fff;
+        font-size: 18px;
+        padding: 0 20px;
+        line-height: 70px;
+        cursor: pointer;
+    }
+    .show:hover{
+        color: cyan;
+    }
+    .icon{
+        display: block;
+        color: #fff;
+        position: absolute;
+        right: 40px;
+        line-height: 70px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul li a:hover{
+        box-shadow: none;
+    }
+    .show + a, ul{
+        display: none;
+    }
+    [id^= btn]:checked + ul{
+        display: block;
+    }
+
+}
+.bacground{
+    width: 80%;
+    background-color: #33ffff;
+    height: 300px;
+    margin: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    
+}
+.vission{
+    background-color: #fff;
+    width: 80%;
+    height: 250px;
+    margin: 25px;
+    padding: 25px;
+    margin-top: 10px;
+    animation-name: vission;
+    animation-duration: 8s;
+    position: relative;
+    animation-iteration-count: infinit;
+}
+.mission{
+    background-color: #fff;
+    width: 80%;
+    height: 250px;
+    margin: 25px;
+    padding: 25px;
+    margin-top: 10px;
+}
+@keyframes vission{
+0%{
+    left: 0%;
+    background-color: #1b1b1b;
+}
+10%{
+    font-size: 50px;
+}
+25%{
+    font-size: 60px;
+}
+50%{
+    left: 400px;
+    background-color: blue;
+}
+100%{
+    background-color: red;
+    left: 100%;
+    opacity: 0;
+}
+
+}
+ 
